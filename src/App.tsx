@@ -2,9 +2,7 @@ import logo from './assets/img/laravelprime-logo.png'
 import frontendMentorIcon from './assets/icons/frontendmentor.svg'
 import githubIcon from './assets/icons/github.svg'
 import xIcon from './assets/icons/x.svg'
-
-import linktray from './assets/img/projects/linktray.png'
-import flds from './assets/img/projects/flds.png'
+import { projects, skills } from './cms'
 
 function App() {
 	return (
@@ -27,7 +25,7 @@ function App() {
 						href="mailto:admin@laravelprime.com"
 						className='sm:text-lg font-semibold text-[#FFFFF4] bg-[#F8770E] px-4 py-2 rounded-full'
 					>
-						Contact
+						Contact Me
 					</a>
 				</div>
 			</header>
@@ -73,31 +71,13 @@ function Hero() {
 				href="mailto:admin@laravelprime.com"
 				className='sm:text-lg font-semibold text-[#FFFFF4] bg-[#F8770E] px-4 py-2 rounded-full'
 			>
-				Reach Out via Email
+				Contact Me
 			</a>
 		</div>
 	)
 }
 
 function Skills() {
-	const skills: Array<{ name: string }> = [{
-		name: 'Laravel',
-	}, {
-		name: 'React',
-	}, {
-		name: 'Tailwind CSS',
-	}, {
-		name: 'JavaScript',
-	}, {
-		name: 'PHP',
-	}, {
-		name: 'MySQL',
-	}, {
-		name: 'HTML',
-	}, {
-		name: 'CSS',
-	}];
-
 	return (
 		<div className='my-8'>
 			<p className='text-sm md:text-base text-[#B0B5BD] text-center mb-1'>
@@ -122,29 +102,6 @@ function Skills() {
 
 // React landing page projects component
 function Projects() {
-	const projects: Array<{ 
-		title: string,
-		technologies: string[],
-		description: string,
-		image: string,
-		repoUrl: string,
-		liveUrl: string
-	}> = [{
-		title: 'Linktray',
-		technologies: ['Laravel', 'React', 'Shadcn'],
-		description: 'Simple web app for creating and sharing lists of links',
-		image: linktray,
-		repoUrl: 'https://github.com/laravelprime/linktray',
-		liveUrl: 'https://linktray.laravelprime.com/'
-	},{
-		title: 'FLDS',
-		technologies: ['Laravel', 'React', 'Shadcn', 'Tailwind CSS'],
-		description: 'Simple web app for creating and sharing lists of links',
-		image: flds,
-		repoUrl: 'https://github.com/laravelprime/linktray',
-		liveUrl: 'https://flds.laravelprime.com/'
-	}];
-	
 	return (
 		<div className='my-8'>
 			<p className='text-sm md:text-base text-[#B0B5BD] text-center mb-1'>
