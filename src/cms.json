@@ -1,0 +1,30 @@
+{
+  "projects": [
+    {
+      "title": "Linktray",
+      "technologies": ["Laravel", "React", "Shadcn"],
+      "description": "Simple web app for creating and sharing lists of links",
+      "image": "https://assets.laravelprime.com/portfolio/img/projects/linktray.png",
+      "repoUrl": "https://github.com/laravelprime/linktray",
+      "liveUrl": "https://linktray.laravelprime.com/"
+    },
+    {
+      "title": "FLDS",
+      "technologies": ["Laravel", "React", "Shadcn", "Tailwind CSS"],
+      "description": "Simple web app for uploading and managing leaked fuel readings",
+      "image": "https://assets.laravelprime.com/portfolio/img/projects/flds.png",
+      "repoUrl": "#!",
+      "liveUrl": "https://flds.laravelprime.com/"
+    }
+  ],
+  "skills": [
+    { "name": "Laravel" },
+    { "name": "React" },
+    { "name": "Tailwind CSS" },
+    { "name": "JavaScript" },
+    { "name": "PHP" },
+    { "name": "MySQL" },
+    { "name": "HTML" },
+    { "name": "CSS" }
+  ]
+}
