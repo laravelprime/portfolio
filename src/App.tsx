@@ -1,7 +1,7 @@
 import logo from './assets/img/laravelprime-logo.png'
 import { SiFrontendmentor } from 'react-icons/si';
 import { FaGithub, FaLinkedin, FaPhone, FaWhatsapp } from 'react-icons/fa';
-import { BsTwitterX } from 'react-icons/bs';
+import { BsLightningCharge, BsTwitterX } from 'react-icons/bs';
 import { projects, skills } from './cms.tsx';
 
 import { BiPhoneCall } from 'react-icons/bi';
@@ -63,7 +63,7 @@ export default App
 function Hero() {
 	return (
 		<div className='flex flex-col items-center justify-center space-y-4 text-center'>
-			<p className='text-lg text-[#DADCDE] border border-[#DADCDE] px-4 py-2 rounded-full'>
+			<p className='text-lg text-[#DADCDE] border border-[#DADCDE] px-4 py-2 rounded-full inline-flex items-center gap-2'>
 				WEB DEVELOPER
 			</p>
 			<h1 className='text-4xl md:text-6xl font-bold text-[#DADCDE] py-2'>
@@ -72,7 +72,7 @@ function Hero() {
 			<p className='text-[#DADCDE] md:text-lg px-2'>
 				Hi, I'm Prince, a web developer and IT professional specializing in Laravel and React. 
 				<br className='hidden md:inline' /> 
-				I create beautiful and functional web applications.
+				
 			</p>
 			<a 
 				href="#about"
@@ -115,14 +115,16 @@ function Projects({id}: {id: string}) {
 				{projects.map(project => (
 					<li 
 						key={project.title}
-						className='flex flex-col space-y-10 md:flex-row md:space-x-8 h-[30rem] md:h-80 rounded-2xl bg-[#001122] p-4 md:p-8'
+						className='flex flex-col max-md:space-y-8 md:flex-row md:space-x-8 md:items-center rounded-2xl bg-[#001122] p-4 md:p-8'
 					>
-						<div className='md:w-[35%] md:h-full rounded-xl overflow-hidden'>
-							<img 
-								src={project.image} 
-								alt={`${project.title} image`} 
-								className='w-full h-full object-cover'
-							/>
+						<div className='lg:w-[45%] md:w-[50%]'>
+							<div className='aspect-video w-full bg-red-200 rounded-xl overflow-hidden'>
+								<img 
+									src={project.image} 
+									alt={`${project.title} image`} 
+									className='w-full h-full object-cover'
+								/>
+							</div>
 						</div>
 						<div className='md:w-[65%] md:h-full flex flex-col space-y-4 justify-center'>
 							<h3 className='text-[#F8FAFB] text-xl md:text-2xl font-bold'>
@@ -144,17 +146,17 @@ function Projects({id}: {id: string}) {
 							<div className='flex flex-col md:flex-row md:space-x-2'>
 								<a 
 									href={project.repoUrl}
-									className='border border-[#F9FFFF] text-[#F9FFFF] rounded-full px-4 py-2'
+									className='border border-[#F9FFFF] text-[#F9FFFF] inline-flex gap-2 rounded-full px-4 py-2'
 									target="_blank" rel="noopener noreferrer"
 								>
-									Github Repository
+									<FaGithub size={24}/> Github Repository
 								</a>
 								<a 
 									href={project.liveUrl}
-									className='text-[#F9FFFF] px-4 py-2'
+									className='text-[#F9FFFF] px-4 py-2 inline-flex gap-2 items-center'
 									target="_blank" rel="noopener noreferrer"
 								>
-									Live Site
+									<BsLightningCharge color='red'/> Live Site
 								</a>
 							</div>
 						</div>
