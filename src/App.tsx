@@ -177,17 +177,17 @@ function About({id}: {id: string}) {
 		{
 			'name': '+263 78 498 8345',
 			'url': 'tel:+263784988345',
-			'icon': <FaPhone size={24} style={{ transform: 'scaleX(-1)' }}/>,
+			'icon': <FaPhone color='magenta' size={24} style={{ transform: 'scaleX(-1)' }}/>,
 		},
 		{
 			'name': 'WhatsApp',
 			'url': 'https://wa.me/263784988345',
-			'icon': <FaWhatsapp size={24}/>,
+			'icon': <FaWhatsapp color='lightgreen' size={24}/>,
 		},
 		{
 			'name': 'LinkedIn',
 			'url': 'https://www.linkedin.com/in/comfort-prince/',
-			'icon': <FaLinkedin size={24}/>,
+			'icon': <FaLinkedin color='hsl(210,90%,60%)' size={24}/>,
 		},
 		{
 			'name': 'Old GitHub Profile',
