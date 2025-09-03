@@ -118,7 +118,7 @@ function Projects({id}: {id: string}) {
 						className='flex flex-col max-md:space-y-8 md:flex-row md:space-x-8 md:items-center rounded-2xl bg-[#001122] p-4 md:p-8'
 					>
 						<div className='lg:w-[45%] md:w-[50%]'>
-							<div className='aspect-video w-full bg-red-200 rounded-xl overflow-hidden'>
+							<div className='aspect-video w-full rounded-xl overflow-hidden'>
 								<img 
 									src={project.image} 
 									alt={`${project.title} image`} 
