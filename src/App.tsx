@@ -2,11 +2,10 @@ import logo from './assets/img/laravelprime-logo.png'
 import { SiFrontendmentor } from 'react-icons/si';
 import { FaGithub, FaLinkedin, FaPhone, FaWhatsapp } from 'react-icons/fa';
 import { BsLightningCharge, BsTwitterX } from 'react-icons/bs';
-import { projects, skills } from './cms.tsx';
+import { skills } from './cms.tsx';
 
 import { BiPhoneCall } from 'react-icons/bi';
-
-console.log(projects, skills);
+import { useEffect, useState } from 'react';
 
 function App() {
 	return (
@@ -106,6 +105,31 @@ function Skills({id}: {id: string}) {
 
 // React landing page projects component
 function Projects({id}: {id: string}) {
+	const [projects, setProjects] = useState<Array<{ 
+		title: string,
+		technologies: string[],
+		description: string,
+		image: string,
+		repoUrl: string,
+		liveUrl: string
+	}>>([])
+	useEffect(() => {
+		const fetchProjects = async () => {
+			const PROJECTS_URL = "https://assets.laravelprime.com/prod/portfolio/data/projects.json";
+			try {
+				const response = await fetch(PROJECTS_URL);
+				const data = await response.json();
+				setProjects(data);
+			} catch (error) {
+				console.error('Error fetching projects:', error);
+			}
+		}
+
+		fetchProjects();
+	}, []);
+
+	console.log(projects);
+
 	return (
 		<div id={id} className='py-8'>
 			<h2 className='text-[#F8FAFB] text-center text-xl md:text-2xl font-bold mb-8'>
